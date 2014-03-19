@@ -8,7 +8,7 @@ A board that provides a serial interface using the ELM327 command set with a veh
 
 Repository Contents
 -------------------
-* **/Firmware** - Example Arduino sketch
+* **/Firmware** - Example Arduino sketch and Python Library for Raspi
 * **/Hardware** - All Eagle design files (.brd, .sch)
 * **/Software** - Information about desktop program to use with this board. 
 
