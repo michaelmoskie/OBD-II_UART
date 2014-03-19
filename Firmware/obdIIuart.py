@@ -12,8 +12,13 @@ class obd2uart:
 
 	def __init__(self):
 		#setup a serial port at 9600 baud. (Is the raspi gpio serial port static?)
-		print "derp"
-	
+		self.ser = serial.Serial(0)
+		print self.ser.portstr
+		self.ser.baudrate = 9600
+
+	def getStatus(self):
+		#A function which returns the data returned by the obd port
+		print "LOL NOT IMPLEMENTED"		
 	def genFunc(self,command):
 		#A general function which sends commands over serial to OBD, returning the data that you requested.
 		self.ser.write(command)
@@ -39,6 +44,4 @@ class obd2uart:
 	def getVehicleSpeed(self):
 		return self.genFunc("010D")
 
-	
-	
-	
+		
